@@ -1,4 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Montserrat&display=swap');
+
 body {
-  background-color: #000000;
-  color: #FFFFFF;
+    background-image: url(../images/main-background-image.png);
+  background-color: #5D9E5C;
+  color: #000000;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    font-family: 'Fredoka One', cursive;
 }
