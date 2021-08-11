@@ -9,4 +9,11 @@ body {
 
 h1 {
     font-family: 'Fredoka One', cursive;
+    letter-spacing: 4px;
+}
+
+#logo {
+    float: left; 
+    font-size: 250%;
+    margin-top: 2px;
 }
