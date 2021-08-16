@@ -13,13 +13,14 @@ h1 {
     font-family: 'Fredoka One', cursive;
     letter-spacing: 4px;
 }
-
+/* Logo */
 #logo {
     float: left; 
     font-size: 250%;
     margin-top: 2px;
+    color: #1C4D18;
 }
-
+/* Quiz Buttons */
 .btn {
     box-sizing: border-box;
     background-color: transparent;
@@ -65,3 +66,35 @@ h1 {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   }
+/* Footer */
+  footer {
+    height: 100px;
+    background-color: #1C4D18;
+    display: flex;
+    margin-top: 30%;
+}
+
+.social-networks {
+    text-align: center;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    top: 15px;
+    position: relative;
+}
+
+.social-networks li {
+    display: inline;
+}
+
+.social-networks i {
+    font-size: 200%;
+    margin: 1%;
+    padding: 5%;
+    color: #77F06E;
+}
+
+.social-networks a:hover i {
+    transform: rotate(-20deg) scale(2);
+    color: #2EFC00;
+}
