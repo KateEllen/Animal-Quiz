@@ -98,3 +98,21 @@ h1 {
     transform: rotate(-20deg) scale(2);
     color: #2EFC00;
 }
+
+
+/*Mobile Responsive*/
+
+@media screen and (max-width: 800px){
+  #logo {
+    font-size: 100%;
+}
+  
+  .btn {
+    height: 10%;
+    font-size: 1rem;
+    width: 100%; 
+  }
+  .container {
+    height: 300px;
+  }
+}
