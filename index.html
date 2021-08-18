@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,24 +12,82 @@
     <script src="quiz.js"></script>
     <title>The Big Animal Quiz</title>
 </head>
+
 <body>
     <header>
         <h1 id="logo">The Big Animal Quiz</h1>
     </header>
 
-    <section> 
-        <div class = "container">
-        <div class = "quiz-options">
 
-        <a href="quiz-one.html" class="btn option">Name That Dog (Easy Mode)</a>
-        <button class="btn option">Animal Trivia (Medium Mode)</button>
-        <button class="btn option">Alligator or Crocodile? (Hard Mode)</button>
+    <section id="controllers"> How To </section>
+    <section id="score" class="">
 
-    </div>
-</div>
+    </section>
+    <section id="quiz-type" class="">
+        <div class="container">
+            <div class="quiz-options">
+
+                <button onclick="startQuiz('dog');" class="btn option">Name That Dog (Easy Mode)</button>
+                <button onclick="startQuiz('trivia');" class="btn option">Animal Trivia (Medium Mode)</button>
+                <button onclick="startQuiz('alli_vs_croc');" class="btn option">Alligator or Crocodile? (Hard
+                    Mode)</button>
+
+            </div>
+        </div>
+    </section>
+    <section id="questions" class="">
+        <div class="dogs">
+            <h1>What Dog is This Quiz</h1>
+            <div class="img-wrap">
+                <img id="doc-pic" src="assets/images/dogs/Pug.jpg" alt="what doggie is this?">
+            </div>
+            <div class="anwers">
+                <button class="btn option" onclick="checkQuestion('a')">Pug</button>
+                <button class="btn option" onclick="checkQuestion('b')">Beagle</button>
+
+            </div>
+        </div>
+        <div class="img-wrap">
+            <img id="doc-pic" src="assets/images/dogs/gshepard.jpg" alt="what doggie is this?">
+        </div>
+        <div class="anwers">
+            <button class="btn option" onclick="checkQuestion('a')">Poodle</button>
+            <button class="btn option" onclick="checkQuestion('b')">German Shepard</button>
+
+        </div>
+        </div>
+        <div class="img-wrap">
+            <img id="doc-pic" src="assets/images/dogs/dalmation.jpg" alt="what doggie is this?">
+        </div>
+        <div class="anwers">
+            <button class="btn option" onclick="checkQuestion('a')">Dalmation</button>
+            <button class="btn option" onclick="checkQuestion('b')">Great Dane</button>
+
+        </div>
+        </div>
+        <div class="img-wrap">
+            <img id="doc-pic" src="assets/images/dogs/Labrador.jpg" alt="what doggie is this?">
+        </div>
+        <div class="anwers">
+            <button class="btn option" onclick="checkQuestion('a')">Labrador</button>
+            <button class="btn option" onclick="checkQuestion('b')">Pitbull</button>
+
+        </div>
+        </div>
+
+        <div class="trivia">
+
+        </div>
+
+        <div class="alli_crocs">
+
+        </div>
+
+    </section>
+    <section id="game_over" class="">
+
     </section>
 
-    <section> How To </section>
 
     <footer>
         <ul class="social-networks">
@@ -52,6 +111,8 @@
 
     <!--font swesome script-->
     <script src="https://kit.fontawesome.com/546096f64a.js" crossorigin="anonymous"></script>
+    <script src="assets/js/quiz.js"></script>
 
 </body>
+
 </html>
