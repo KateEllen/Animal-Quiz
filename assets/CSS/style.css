@@ -141,10 +141,16 @@ body.wrong {
 .container {
   width: 800px;
   max-width: 80%;
+  height:auto;
   background-color: white;
   border-radius: 5px;
   padding: 10px;
   box-shadow: 0 0 10px 2px;
+}
+
+.picture {
+  width: 400px;
+  height: 350px;
 }
 
 .btn-grid {
@@ -188,6 +194,7 @@ body.wrong {
   justify-content: center;
   align-items: center;
 }
+
 
 .hide {
   display: none;
