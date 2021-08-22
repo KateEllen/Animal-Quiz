@@ -30,6 +30,17 @@ function setNextQuestion() {
   }
 
   function showQuestion(question) {
+      if(typeof(question.picture )!= 'undefined') {
+        let picture = document.getElementById('picture')
+        while (picture.firstChild) {
+            picture.removeChild(picture.firstChild)
+          }
+        const dogPicture = document.createElement('img')
+        picture.classList.remove('hide')
+        dogPicture.src= question.picture
+        dogPicture.alt= 'What is this picture of?'
+        picture.appendChild(dogPicture)
+      }
     questionElement.innerText = question.question
     question.answers.forEach(answer => {
       const button = document.createElement('button')
@@ -62,8 +73,8 @@ function selectAnswer(e) {
         nextButton.classList.remove('hide')
     } else {
         startButton.innerText = 'Restart'
-        startButton.classlist.remove('hide')
-    }
+        startButton.classList.remove('hide')
+      }
     
 }
 
@@ -84,47 +95,48 @@ function selectAnswer(e) {
 
  const questions = [{
     question: "What dog is this?",
-    picture: "pug",
+    picture: "assets/images/dogs/bulldog.jpg",
+    attribution: "Image by Ilona Krijgsman from Pixabay",
     answers: [
-        {text: 'Pug', correct: true},
+        {text: 'Bulldog', correct: true},
         {text: 'Beagle', correct: false}
     ]
 },
 {
-    question: "What is this?",
-    picture: "german shepard",
-    answers: {
-        a: 'Poodle',
-        b: 'German Shepard',
-    },
-    correctAnswer: 'b'
+    question: "What dog is this?",
+    picture: "assets/images/dogs/doberman.jpg",
+    attribution: "Image by Here and now, unfortunately, ends my journey on Pixabay from Pixabay ",
+    answers: [
+        {text: 'Poodle', correct: false},
+        {text: 'Doberman', correct: true}
+    ]
 },
 {
-    question: "What is this?",
-    picture: "Collie",
-    answers: {
-        a: 'Jack Russel',
-        b: 'Collie',
-    },
-    correctAnswer: 'b'
+    question: "What dog is this?",
+    picture: "assets/images/dogs/collie.jpg",
+    attribution: "Image by Here and now, unfortunately, ends my journey on Pixabay from Pixabay ",
+    answers: [
+        {text: 'Jack Russel', correct: false},
+        {text: 'Collie', correct: true}
+    ]
 },
 {
-    question: "What is this?",
-    picture: "dalmation",
-    answers: {
-        a: 'Dalmation',
-        b: 'Great Dane',
-    },
-    correctAnswer: 'a'
+    question: "What dog is this?",
+    picture: "assets/images/dogs/dalmation.jpg",
+    attribution: "Photo by Kasuma from Pexels",
+    answers: [
+        {text: 'Dalmation', correct: true},
+        {text: 'Great Dane', correct: false}
+    ]
 },
 {
-    question: "What is this?",
-    picture: "labrador",
-    answers: {
-        a: 'Labrador',
-        b: 'Pitbull',
-    },
-    correctAnswer: 'a'
+    question: "What dog is this?",
+    picture: "assets/images/dogs/labrador.jpg",
+    attribution: "Image by Josch Nolte from Pixabay",
+    answers: [
+        {text: 'Labrador', correct: true},
+        {text: 'Pitbull', correct: false}
+    ]
 }];
 /** 
 const TRIVIA = [{
