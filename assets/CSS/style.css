@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Montserrat&display=swap');
 
-/*body {
+body {
   background-image: url();
   background-color: #FFFFFF;
   color: #000000;
@@ -110,6 +110,11 @@ h1 {
 *, *::before, *::after {
   box-sizing: border-box;
   font-family: Gotham Rounded;
+}
+
+.greeting {
+  height: 200px;
+    position: relative;
 }
 
 :root {

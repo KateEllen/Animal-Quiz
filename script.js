@@ -2,6 +2,8 @@
 /*let quiz_type;
 let questions;*/
 
+
+
 const startButton = document.getElementById('start-btn')
 const nextButton = document.getElementById('next-btn')
 const questionContainerElement = document.getElementById('question-container')
@@ -54,6 +56,15 @@ function setNextQuestion() {
     })
   }
 
+  function checkAnswer () {
+      if (isCorrect) {
+          incrementScore();
+      }
+      else {
+          incrementWrongAnswer();
+      }
+  }
+
   function resetState() {
     clearStatusClass(document.body)
     nextButton.classList.add('hide')
@@ -92,6 +103,15 @@ function selectAnswer(e) {
         element.classList.remove('wrong') 
     }
 
+    function incrementScore() {
+        let oldScore = parseInt(document.getElementById("score").innerText); 
+        document.getElementById("score").innerText = ++oldScore; 
+    }
+
+    function incrementWrongAnswer() {
+        let oldScore = parseInt(document.getElementById("incorrect").innerText); 
+        document.getElementById("incorrect").innerText = ++oldScore; 
+    }
 
  const questions = [{
     question: "What dog is this?",
@@ -165,3 +185,18 @@ function startQuiz(quizType) {
         questions = DOG_QUESTIONS;
     }
 }*/
+
+// create welcome function
+
+function welcome(whatever) {
+    document.getElementById("greeting").innerHTML = whatever;
+    // alert("Welcome, " + whatever + " !");
+  }
+  
+  // create userName variable
+  
+  var userName = prompt("What is your name?") 
+  
+  // run welcome function
+  
+  welcome(userName);
