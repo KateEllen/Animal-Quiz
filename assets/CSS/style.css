@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Montserrat&display=swap');
 
-body {
+/*body {
   background-image: url();
   background-color: #FFFFFF;
   color: #000000;
@@ -11,17 +11,17 @@ body {
 
 h1 {
     font-family: 'Fredoka One', cursive;
-    letter-spacing: 4px;
+    letter-spacing: 4px;*/
 }
 /* Logo */
-#logo {
+/* #logo {
     float: left; 
     font-size: 250%;
     margin-top: 2px;
-    color: #1C4D18;
+    color: #1C4D18;*/
 }
 /* Quiz Buttons */
-.btn {
+/* .btn {
     box-sizing: border-box;
     background-color: transparent;
     border: 2px solid #1C8215;
@@ -65,9 +65,9 @@ h1 {
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  }
+  }*/
 /* Footer */
-  footer {
+  /*footer {
     height: 100px;
     background-color: #1C4D18;
     position: fixed;
@@ -103,10 +103,100 @@ h1 {
     color: #2EFC00;
 }
 
+.hide {
+  display: none;
+}*/
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: Gotham Rounded;
+}
+
+:root {
+  --hue-neutral: 200;
+  --hue-wrong: 0;
+  --hue-correct: 145;
+}
+
+body {
+  --hue: var(--hue-neutral);
+  padding: 0;
+  margin: 0;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(var(--hue), 100%, 20%);
+}
+
+body.correct {
+  --hue: var(--hue-correct);
+}
+
+body.wrong {
+  --hue: var(--hue-wrong);
+}
+
+.container {
+  width: 800px;
+  max-width: 80%;
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 0 10px 2px;
+}
+
+.btn-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.btn {
+  --hue: var(--hue-neutral);
+  border: 1px solid hsl(var(--hue), 100%, 30%);
+  background-color: hsl(var(--hue), 100%, 50%);
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: white;
+  outline: none;
+}
+
+.btn:hover {
+  border-color: black;
+}
+
+.btn.correct {
+  --hue: var(--hue-correct);
+  color: black;
+}
+
+.btn.wrong {
+  --hue: var(--hue-wrong);
+}
+
+.start-btn, .next-btn {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px 20px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hide {
+  display: none;
+}
+
 
 /*Mobile Responsive*/
 
-@media screen and (max-width: 800px){
+/*@media screen and (max-width: 800px){
   #logo {
     font-size: 100%;
 }
@@ -119,4 +209,4 @@ h1 {
   .container {
     height: 300px;
   }
-}
+}*/
