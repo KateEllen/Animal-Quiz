@@ -56,14 +56,6 @@
      })
  }
 
- function checkAnswer() {
-     if (isCorrect) {
-         incrementScore();
-     } else {
-         incrementWrongAnswer();
-     }
- }
-
  function resetState() {
      clearStatusClass(document.body)
      nextButton.classList.add('hide')
@@ -79,6 +71,8 @@
      Array.from(answerButtonsElement.children).forEach(button => {
          setStatusClass(button, button.dataset.correct)
      })
+
+     checkAnswer(correct)
      if (shuffledQuestions.length > currentQuestionIndex + 1) {
          nextButton.classList.remove('hide')
      } else {
@@ -87,6 +81,14 @@
      }
 
  }
+
+ function checkAnswer(isCorrect) {
+    if (isCorrect) {
+        incrementScore();
+    } else {
+        incrementWrongAnswer();
+    }
+}
 
  function setStatusClass(element, correct) {
      clearStatusClass(element)
@@ -111,6 +113,31 @@
      let oldScore = parseInt(document.getElementById("incorrect").innerText);
      document.getElementById("incorrect").innerText = ++oldScore;
  }
+
+ var modal = document.getElementById("myModal");
+
+
+var btn = document.getElementById("myBtn");
+
+
+var span = document.getElementsByClassName("close")[0];
+
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
 
  const questions = [{
          question: "What dog is this?",
