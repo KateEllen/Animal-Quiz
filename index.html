@@ -124,8 +124,8 @@
 
     </footer>-->
 
-    <!--font swesome script-->
-    <!--f<script src="https://kit.fontawesome.com/546096f64a.js" crossorigin="anonymous"></script>
+<!--font swesome script-->
+<!--f<script src="https://kit.fontawesome.com/546096f64a.js" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
 
 </body>
@@ -134,62 +134,74 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="assets/CSS/style.css" rel="stylesheet">
-  <title>Quiz App</title>
-</head>
-<body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="assets/CSS/style.css" rel="stylesheet" />
+    <title>Quiz App</title>
+  </head>
+  <body>
     <header>
-        <h1 id="logo">The Big Animal Quiz</h1>
+      <h1 id="logo">The Big Animal Quiz</h1>
     </header>
 
-    <h1>Welcome, <span id="greeting"></span>!</h1>
-    
-  <div class="container">
-    <div id="question-container" class="hide">
-      <div id="question">Question</div>
-      <div id= "picture" class= "hide img-wrapper"></div>
+    <div class="quiz-container">
+      <h1>Welcome, <span id="greeting"></span>!</h1>
 
-      <div id="answer-buttons" class="btn-grid">
-        <button class="btn">Answer 1</button>
-        <button class="btn">Answer 2</button>
-        <button class="btn">Answer 3</button>
-        <button class="btn">Answer 4</button>
+      <div class="container">
+        <div id="question-container" class="hide">
+          <div id="question">Question</div>
+          <div id="picture" class="hide img-wrapper"></div>
+
+          <div id="answer-buttons" class="btn-grid">
+            <button class="btn">Answer 1</button>
+            <button class="btn">Answer 2</button>
+            <button class="btn">Answer 3</button>
+            <button class="btn">Answer 4</button>
+          </div>
+        </div>
+        <div class="controls" id="quizButtonContainer"></div>
+        <div>
+          <button id="next-btn" class="next-btn btn hide">Next</button>
+          <button id="restart-btn" class="restart-btn btn hide">
+            Restart
+          </button>
+        </div>
+      </div>
+      <div class="score-area">
+        <p class="scores">Correct Answers<span id="score">0</span></p>
+        <p class="scores">Incorrect Answers<span id="incorrect">0</span></p>
+      </div>
+
+      <button id="howToButton">How To</button>
+
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <button id="closeHowTo">&times;</button>
+          <h2>How To Play</h2>
+          <ul>
+            <li>
+              What Dog Is This: A game where a picture is given and you choose
+              what type of dog is in the picture
+            </li>
+            <li>
+              Animal Trivia: A true or false quiz, test your animal knowledge!
+            </li>
+            <li>
+              Aligator VS Crocodile: A game where a picture is shown and you
+              decide if it's an aligator or a crocodile.
+            </li>
+          </ul>
+          <p>
+            Each game has only 5 questions, but there's a wide variety of
+            questions so if you play again, you may not get repeated questions.
+          </p>
+        </div>
       </div>
     </div>
-    <div class="controls">
-      <button id="start-btn" class="start-btn btn">Start</button>
-      <button id="next-btn" class="next-btn btn hide">Next</button>
-    </div>
-  </div>
-  <div class = "score-area">
-      <p class="scores">Correct Answers<span id="score">0</span></p>
-      <p class="scores">Incorrect Answers<span id="incorrect">0</span></p>
-  </div>
-
-  <button id="btn option">How To</button>
-
-<!-- The Modal -->
-<div id="myModal" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h2>How To Play</h2>
-     <ul>
-        <li>What Dog Is This: A game where a picture is given and you choose what type of dog is in the picture</li>
-        <li>Animal Trivia: A true or false quiz, test your animal knowledge!</li>
-        <li>Aligator VS Crocodile: A game where a picture is shown and you decide if it's an aligator or a crocodile. </li>
-    </ul>
-    <p>Each game has only 5 questions, but there's a wide variety of questions so if you play again, you may not get repeated questions.</p>
-  </div>
-
-</div>
-
-  <script defer src="assets/js/script.js"></script>
-</body>
+    <script type="module" defer src="assets/js/script.js"></script>
+  </body>
 </html>

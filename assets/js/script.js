@@ -1,5 +1,4 @@
- /*jshint esversion: 6 */
- import questionnaire from "./questions.js";
+import questionnaire from "./questions.js";
 
 const nextButton = document.getElementById("next-btn");
 const questionContainerElement = document.getElementById("question-container");
@@ -148,6 +147,35 @@ window.onclick = function (event) {
   }
 };
 
+/** 
+ const TRIVIA = [{
+     question: "The cheetah is the fastest animal on land",
+     answers: {
+         a: 'True',
+         b: 'False'
+     },
+     correctAnswer: 'b'
+ }];
+
+ const ALLI_VS_CROC = [{
+     question: "What is this?",
+     picture: "ally_1",
+     answers: {
+         a: 'alligator',
+         b: 'crocodile'
+     },
+     correctAnswer: 'a'
+ }];
+
+
+ function startQuiz(quizType) {
+     quiz_type = quizType;
+     if (quiz_type == 'dog') {
+         questions = DOG_QUESTIONS;
+     }
+ }*/
+
+// create welcome function
 
 function welcome(whatever) {
   document.getElementById("greeting").innerHTML = whatever;

@@ -1,23 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Montserrat&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Montserrat&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 body {
   background-image: url();
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   color: #000000;
-  font-family: 'Montserrat', sans-serif;
-  display: flex;
-  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  --hue: var(--hue-neutral);
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: hsl(var(--hue), 100%, 20%);
 }
 
 h1 {
-    font-family: 'Fredoka One', cursive;
-    letter-spacing: 4px;*/
+  font-family: "Fredoka One", cursive;
+  letter-spacing: 4px;
 }
 /* Logo */
-/* #logo {
-    float: left; 
-    font-size: 250%;
-    margin-top: 2px;*/
+
+#logo {
+  font-size: 250%;
+  margin-top: 2px;
 }
 /* Quiz Buttons */
 /* .btn {
@@ -66,7 +76,7 @@ h1 {
   transform: translate(-50%, -50%);
   }*/
 /* Footer */
-  /*footer {
+/*footer {
     height: 100px;
     background-color: #1C4D18;
     position: fixed;
@@ -106,15 +116,17 @@ h1 {
   display: none;
 }*/
 
-*, *::before, *::after {
-  box-sizing: border-box;
-  font-family: Gotham Rounded;
+/* Logo */
+
+.quiz-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
 }
 
-/* Logo */
- 
-
-.img-wrapper{
+.img-wrapper {
   margin: 0 auto;
   display: block;
   position: relative;
@@ -124,7 +136,7 @@ h1 {
   padding: 10px;
   overflow: hidden;
 }
-.img-wrapper img{
+.img-wrapper img {
   margin: auto;
   object-fit: contain;
   width: 100%;
@@ -132,28 +144,15 @@ h1 {
   max-height: 150px;
 }
 
-
 .greeting {
   height: 200px;
-    position: relative;
+  position: relative;
 }
 
 :root {
   --hue-neutral: 200;
   --hue-wrong: 0;
   --hue-correct: 145;
-}
-
-body {
-  --hue: var(--hue-neutral);
-  padding: 0;
-  margin: 0;
-  display: flex;
-  width: 100vw;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-  background-color: hsl(var(--hue), 100%, 20%);
 }
 
 body.correct {
@@ -167,10 +166,10 @@ body.wrong {
 .container {
   width: 800px;
   max-width: 80%;
-  height:auto;
+  height: auto;
   background-color: white;
   border-radius: 5px;
-  padding: 10px;
+  padding: 30px;
   box-shadow: 0 0 10px 2px;
 }
 
@@ -209,10 +208,12 @@ body.wrong {
   --hue: var(--hue-wrong);
 }
 
-.start-btn, .next-btn {
+.start-btn,
+.next-btn {
   font-size: 1.5rem;
   font-weight: bold;
   padding: 10px 20px;
+  margin: 0 20px;
 }
 
 .controls {
@@ -232,8 +233,8 @@ body.wrong {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
 /* Modal Content/Box */
@@ -246,29 +247,26 @@ body.wrong {
 }
 
 /* The Close Button */
-.close {
+#closeHowTo {
   color: #aaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
+.closeHowTo:hover,
+.closeHowTo:focus {
   color: black;
   text-decoration: none;
   cursor: pointer;
 }
 
 .myBtn {
- 
 }
-
 
 .hide {
   display: none;
 }
-
 
 /*Mobile Responsive*/
 
@@ -286,3 +284,14 @@ body.wrong {
     height: 300px;
   }
 }*/
+
+@media only screen and (max-width: 800px) {
+  .controls {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  .container {
+    max-width: 95%;
+  }
+}
