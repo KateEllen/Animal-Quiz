@@ -63,7 +63,7 @@ Below are the wireframes I created when first starting my project. I mainly stuc
 
 ## Deployments 
 
-The live link can be found here - https://kateellen.github.io/life-hacks/
+The live link can be found here - https://kateellen.github.io/Animal-Quiz/
 
 ### Credits 
 
