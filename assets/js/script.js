@@ -1,254 +1,162 @@
  /*jshint esversion: 6 */
- /*let quiz_type;
- let questions;*/
+ import questionnaire from "./questions.js";
 
+const nextButton = document.getElementById("next-btn");
+const questionContainerElement = document.getElementById("question-container");
+const answerButtonsElement = document.getElementById("answer-buttons");
+const quizButtonContainer = document.getElementById("quizButtonContainer");
 
+let shuffledQuestions, currentQuestionIndex;
 
- const startButton = document.getElementById('start-btn')
- const nextButton = document.getElementById('next-btn')
- const questionContainerElement = document.getElementById('question-container')
- const questionElement = document.getElementById('question')
- const answerButtonsElement = document.getElementById('answer-buttons')
+questionnaire.forEach(function (question) {
+  quizButtonContainer.innerHTML += `<button class="start-quiz start-btn btn">${question.name}</button>`;
+});
 
- let shuffledQuestions, currentQuestionIndex
+const quizButtons = document.querySelectorAll(".start-quiz");
 
- startButton.addEventListener('click', startGame)
- nextButton.addEventListener('click', () => {
-     currentQuestionIndex++
-     setNextQuestion()
- })
+quizButtons.forEach((quizButton, index) => {
+  quizButton.addEventListener("click", () => {
+    startGame(index);
+  });
+});
 
- function startGame() {
-     startButton.classList.add('hide')
-     shuffledQuestions = questions.sort(() => Math.random() - .5)
-     currentQuestionIndex = 0
-     questionContainerElement.classList.remove('hide')
-     setNextQuestion()
- }
+nextButton.addEventListener("click", () => {
+  currentQuestionIndex++;
+  setNextQuestion();
+});
 
- function setNextQuestion() {
-     resetState()
-     showQuestion(shuffledQuestions[currentQuestionIndex])
- }
+function startGame(questionaireIndex) {
+  quizButtonContainer.classList.add("hide");
+  shuffledQuestions = questionnaire[questionaireIndex].questions.sort(
+    () => Math.random() - 0.5
+  );
+  currentQuestionIndex = 0;
+  questionContainerElement.classList.remove("hide");
+  setNextQuestion();
+}
 
- function showQuestion(question) {
-     if (typeof (question.picture) != 'undefined') {
-         let picture = document.getElementById('picture')
-         while (picture.firstChild) {
-             picture.removeChild(picture.firstChild)
-         }
-         const dogPicture = document.createElement('img')
-         picture.classList.remove('hide')
-         dogPicture.src = question.picture
-         dogPicture.alt = 'What is this picture of?'
-         picture.appendChild(dogPicture)
-     }
-     questionElement.innerText = question.question
-     question.answers.forEach(answer => {
-         const button = document.createElement('button')
-         button.innerText = answer.text
-         button.classList.add('btn')
-         if (answer.correct) {
-             button.dataset.correct = answer.correct
-         }
-         button.addEventListener('click', selectAnswer)
-         answerButtonsElement.appendChild(button)
-     })
- }
+function setNextQuestion() {
+  resetState();
+  showQuestion(shuffledQuestions[currentQuestionIndex]);
+}
 
- function resetState() {
-     clearStatusClass(document.body)
-     nextButton.classList.add('hide')
-     while (answerButtonsElement.firstChild) {
-         answerButtonsElement.removeChild(answerButtonsElement.firstChild)
-     }
- }
-
- function selectAnswer(e) {
-     const selectedButton = e.target
-     const correct = selectedButton.dataset.correct
-     setStatusClass(document.body, correct)
-     Array.from(answerButtonsElement.children).forEach(button => {
-         setStatusClass(button, button.dataset.correct)
-     })
-
-     checkAnswer(correct)
-     if (shuffledQuestions.length > currentQuestionIndex + 1) {
-         nextButton.classList.remove('hide')
-     } else {
-         startButton.innerText = 'Restart'
-         startButton.classList.remove('hide')
-     }
-
- }
-
- function checkAnswer(isCorrect) {
-    if (isCorrect) {
-        incrementScore();
-    } else {
-        incrementWrongAnswer();
+function showQuestion(question) {
+  if (typeof question.picture !== "undefined") {
+    let picture = document.getElementById("picture");
+    while (picture.firstChild) {
+      picture.removeChild(picture.firstChild);
     }
+    const dogPicture = document.createElement("img");
+    picture.classList.remove("hide");
+    dogPicture.src = question.picture;
+    dogPicture.alt = "What is this picture of?";
+    picture.appendChild(dogPicture);
+  }
+  document.getElementById("question").innerText = question.question;
+  question.answers.forEach((answer) => {
+    const button = document.createElement("button");
+    button.innerText = answer.text;
+    button.classList.add("btn");
+    if (answer.correct) {
+      button.dataset.correct = answer.correct;
+    }
+    button.addEventListener("click", selectAnswer);
+    answerButtonsElement.appendChild(button);
+  });
 }
 
- function setStatusClass(element, correct) {
-     clearStatusClass(element)
-     if (correct) {
-         element.classList.add('correct')
-     } else {
-         element.classList.add('wrong')
-     }
- }
-
- function clearStatusClass(element) {
-     element.classList.remove('correct')
-     element.classList.remove('wrong')
- }
-
- function incrementScore() {
-     let oldScore = parseInt(document.getElementById("score").innerText);
-     document.getElementById("score").innerText = ++oldScore;
- }
-
- function incrementWrongAnswer() {
-     let oldScore = parseInt(document.getElementById("incorrect").innerText);
-     document.getElementById("incorrect").innerText = ++oldScore;
- }
-
- var modal = document.getElementById("myModal");
-
-
-var btn = document.getElementById("myBtn");
-
-
-var span = document.getElementsByClassName("close")[0];
-
-
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
+function resetState() {
+  clearStatusClass(document.body);
+  nextButton.classList.add("hide");
+  while (answerButtonsElement.firstChild) {
+    answerButtonsElement.removeChild(answerButtonsElement.firstChild);
   }
 }
 
- const questions = [{
-         question: "What dog is this?",
-         picture: "assets/images/dogs/bulldog.jpg",
-         attribution: "Image by Ilona Krijgsman from Pixabay",
-         answers: [{
-                 text: 'Bulldog',
-                 correct: true
-             },
-             {
-                 text: 'Beagle',
-                 correct: false
-             }
-         ]
-     },
-     {
-         question: "What dog is this?",
-         picture: "assets/images/dogs/doberman.jpg",
-         attribution: "Image by Here and now, unfortunately, ends my journey on Pixabay from Pixabay ",
-         answers: [{
-                 text: 'Poodle',
-                 correct: false
-             },
-             {
-                 text: 'Doberman',
-                 correct: true
-             }
-         ]
-     },
-     {
-         question: "What dog is this?",
-         picture: "assets/images/dogs/collie.jpg",
-         attribution: "Image by Here and now, unfortunately, ends my journey on Pixabay from Pixabay ",
-         answers: [{
-                 text: 'Jack Russel',
-                 correct: false
-             },
-             {
-                 text: 'Collie',
-                 correct: true
-             }
-         ]
-     },
-     {
-         question: "What dog is this?",
-         picture: "assets/images/dogs/dalmation.jpg",
-         attribution: "Photo by Kasuma from Pexels",
-         answers: [{
-                 text: 'Dalmation',
-                 correct: true
-             },
-             {
-                 text: 'Great Dane',
-                 correct: false
-             }
-         ]
-     },
-     {
-         question: "What dog is this?",
-         picture: "assets/images/dogs/labrador.jpg",
-         attribution: "Image by Josch Nolte from Pixabay",
-         answers: [{
-                 text: 'Labrador',
-                 correct: true
-             },
-             {
-                 text: 'Pitbull',
-                 correct: false
-             }
-         ]
-     }
- ];
- /** 
- const TRIVIA = [{
-     question: "The cheetah is the fastest animal on land",
-     answers: {
-         a: 'True',
-         b: 'False'
-     },
-     correctAnswer: 'b'
- }];
+function selectAnswer(e) {
+  const selectedButton = e.target;
+  const correct = selectedButton.dataset.correct;
+  setStatusClass(document.body, correct);
+  Array.from(answerButtonsElement.children).forEach((button) => {
+    setStatusClass(button, button.dataset.correct);
+  });
 
- const ALLI_VS_CROC = [{
-     question: "What is this?",
-     picture: "ally_1",
-     answers: {
-         a: 'alligator',
-         b: 'crocodile'
-     },
-     correctAnswer: 'a'
- }];
+  checkAnswer(correct);
+  nextButton.classList.remove("hide");
+  if (shuffledQuestions.length > currentQuestionIndex + 1) {
+    nextButton.classList.remove("hide");
+  } else {
+    nextButton.classList.add("hide");
+    // Add restart button
+    const restartButton = document.getElementById("restart-btn");
+    restartButton.classList.remove("hide");
+    restartButton.addEventListener("click", function () {
+      window.location.reload(false);
+    });
+  }
+}
+
+function checkAnswer(isCorrect) {
+  if (isCorrect) {
+    incrementScore();
+  } else {
+    incrementWrongAnswer();
+  }
+}
+
+function setStatusClass(element, correct) {
+  clearStatusClass(element);
+  if (correct) {
+    element.classList.add("correct");
+  } else {
+    element.classList.add("wrong");
+  }
+}
+
+function clearStatusClass(element) {
+  element.classList.remove("correct");
+  element.classList.remove("wrong");
+}
+
+function incrementScore() {
+  let oldScore = parseInt(document.getElementById("score").innerText);
+  document.getElementById("score").innerText = ++oldScore;
+}
+
+function incrementWrongAnswer() {
+  let oldScore = parseInt(document.getElementById("incorrect").innerText);
+  document.getElementById("incorrect").innerText = ++oldScore;
+}
+
+const modal = document.getElementById("myModal");
+
+const howToButton = document.getElementById("howToButton");
+
+const closeHowTo = document.getElementById("closeHowTo");
+
+howToButton.onclick = function () {
+  modal.style.display = "block";
+};
+
+closeHowTo.onclick = function () {
+  modal.style.display = "none";
+};
+
+window.onclick = function (event) {
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+};
 
 
- function startQuiz(quizType) {
-     quiz_type = quizType;
-     if (quiz_type == 'dog') {
-         questions = DOG_QUESTIONS;
-     }
- }*/
+function welcome(whatever) {
+  document.getElementById("greeting").innerHTML = whatever;
+}
 
- // create welcome function
+// create userName variable
 
- function welcome(whatever) {
-     document.getElementById("greeting").innerHTML = whatever;
-     // alert("Welcome, " + whatever + " !");
- }
+var userName = prompt("What is your name?");
 
- // create userName variable
+// run welcome function
 
- var userName = prompt("What is your name?")
-
- // run welcome function
-
- welcome(userName);
+welcome(userName);
