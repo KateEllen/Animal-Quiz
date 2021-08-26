@@ -76,7 +76,7 @@ h1 {
   transform: translate(-50%, -50%);
   }*/
 /* Footer */
-/*footer {
+/* footer {
     height: 100px;
     background-color: #1C4D18;
     position: fixed;
@@ -268,22 +268,6 @@ body.wrong {
   display: none;
 }
 
-/*Mobile Responsive*/
-
-/*@media screen and (max-width: 800px){
-  #logo {
-    font-size: 100%;
-}
-  
-  .btn {
-    height: 10%;
-    font-size: 1rem;
-    width: 100%; 
-  }
-  .container {
-    height: 300px;
-  }
-}*/
 
 @media only screen and (max-width: 800px) {
   .controls {

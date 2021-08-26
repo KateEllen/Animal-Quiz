@@ -147,44 +147,15 @@ window.onclick = function (event) {
   }
 };
 
-/** 
- const TRIVIA = [{
-     question: "The cheetah is the fastest animal on land",
-     answers: {
-         a: 'True',
-         b: 'False'
-     },
-     correctAnswer: 'b'
- }];
 
- const ALLI_VS_CROC = [{
-     question: "What is this?",
-     picture: "ally_1",
-     answers: {
-         a: 'alligator',
-         b: 'crocodile'
-     },
-     correctAnswer: 'a'
- }];
-
-
- function startQuiz(quizType) {
-     quiz_type = quizType;
-     if (quiz_type == 'dog') {
-         questions = DOG_QUESTIONS;
-     }
- }*/
 
 // create welcome function
 
-function welcome(whatever) {
+function welcome(fname) {
   document.getElementById("greeting").innerHTML = whatever;
 }
 
-// create userName variable
 
-var userName = prompt("What is your name?");
-
-// run welcome function
-
-welcome(userName);
+// see if user entered a name in the form and update welcome function with that value
+welcome(document.getElementById("fname").value)
+document.getElementById("nameCollector").classList.add("hide"); 
