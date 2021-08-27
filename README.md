@@ -15,7 +15,7 @@ This site is designed for people who love animals and quizzes. Test your dog kno
 ### Wireframes 
 
 Below are the wireframes I created when first starting my project. I mainly stuck to the wireframes. 
-
+[Opening page](https://github.com/KateEllen/Animal-Quiz/tree/main/assets/images/documentation)
 
 ## Design Choices 
 
