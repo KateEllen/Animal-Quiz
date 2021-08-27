@@ -335,10 +335,7 @@ background: linear-gradient(180deg, rgba(255,0,0,1) 33%, rgba(135,3,3,1) 68%); *
     rgba(3, 135, 15, 1) 68%
   );
 }
-/* background: rgb(123,255,0);
-background: linear-gradient(180deg, rgba(123,255,0,1) 33%, rgba(3,135,15,1) 68%); */
 
-/* Needs to be fixed */
 .start-btn,
 .next-btn {
   font-size: 1.5rem;
@@ -360,5 +357,11 @@ background: linear-gradient(180deg, rgba(123,255,0,1) 33%, rgba(3,135,15,1) 68%)
 
   .container {
     max-width: 95%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .quiz-interaction {
+    max-width: 80%;
   }
 }
