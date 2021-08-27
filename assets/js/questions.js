@@ -119,29 +119,29 @@
       ]
     },
     {
-      question: "What dog is this?",
-      picture: "assets/images/dogs/dalmation.jpg",
-      attribution: "Photo by Kasuma from Pexels",
+      question: "Is it an alligator or Crocodile?",
+      picture: "assets/images/ali-v-croc/ali-1.jpg",
+      attribution: "Image by AP-Berlin from Pixabay",
       answers: [{
-          text: "Dalmation",
+          text: "Ali",
           correct: true
         },
         {
-          text: "Great Dane",
+          text: "Croc",
           correct: false
         }
       ]
     },
     {
-      question: "What dog is this?",
-      picture: "assets/images/dogs/labrador.jpg",
-      attribution: "Image by Josch Nolte from Pixabay",
+      question: "Is it an alligator or Crocodile?",
+      picture: "assets/images/ali-v-croc/ali-2.jpg",
+      attribution: "Image by https://www.stockvault.net/photo/205010/alligator-closeup",
       answers: [{
-          text: "Labrador",
+          text: "Ali",
           correct: true
         },
         {
-          text: "Pitbull",
+          text: "Croc",
           correct: false
         }
       ]
