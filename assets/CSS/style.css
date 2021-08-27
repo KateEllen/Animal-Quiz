@@ -59,13 +59,8 @@ body {
 .social-networks a:hover i {
     transform: rotate(-20deg) scale(1.5);
     color:#a060f1ff;
-    ;
 }
 
-
-
-
-/* Logo */
 
 .img-wrapper {
   margin: 0 auto;
@@ -290,7 +285,369 @@ h2 {
 
 #howToButton {
   margin-top: 20px;
-  border: none;
+  border: no@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Montserrat&display=swap");
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-image: url();
+    background-color: #ffffff;
+    color: #000000;
+    font-family: "Montserrat", sans-serif;
+    --hue: var(--hue-neutral);
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    min-height: 100vh;
+    background: rgb(123, 106, 251);
+    background: radial-gradient(
+      circle,
+      rgba(123, 106, 251, 1) 0%,
+      rgba(29, 0, 255, 1) 100%
+    );
+  }
+  
+  /* Footer */
+  /* footer {
+      height: 100px;
+      background-color: #1C4D18;
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      display: flex;
+   
+  }
+  
+  .social-networks {
+      text-align: center;
+      display: flex;
+      width: 100%;
+      justify-content: space-around;
+      top: 15px;
+      position: relative;
+  }
+  
+  .social-networks li {
+      display: inline;
+  }
+  
+  .social-networks i {
+      font-size: 200%;
+      margin: 1%;
+      padding: 5%;
+      color: #77F06E;
+  }
+  
+  .social-networks a:hover i {
+      transform: rotate(-20deg) scale(2);
+      color: #2EFC00;
+  }
+  
+  .hide {
+    display: none;
+  }*/
+  
+  /* Logo */
+  
+  .img-wrapper {
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    width: 250px;
+    height: 150px;
+    border: 1px solid #dcdcdd;
+    padding: 10px;
+    overflow: hidden;
+  }
+  .img-wrapper img {
+    margin: auto;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    max-height: 150px;
+  }
+  
+  .greeting {
+    height: 200px;
+    position: relative;
+  }
+  
+  :root {
+    --hue-neutral: 200;
+    --hue-wrong: 0;
+    --hue-correct: 145;
+  }
+  
+  body.correct {
+    --hue: var(--hue-correct);
+  }
+  
+  body.wrong {
+    --hue: var(--hue-wrong);
+  }
+  
+  .container {
+    width: 800px;
+    max-width: 80%;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    padding: 30px;
+    -webkit-box-shadow: 0px 0px 14px -3px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 0px 14px -3px rgba(0, 0, 0, 0.7);
+  }
+  
+  .picture {
+    width: 400px;
+    height: 350px;
+  }
+  
+  .btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  .btn {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 24px;
+    color: #fff;
+    background: rgb(0, 195, 255);
+    background: linear-gradient(
+      180deg,
+      rgba(0, 195, 255, 1) 0%,
+      rgba(0, 119, 156, 1) 98%
+    );
+    -webkit-box-shadow: 0px 0px 14px -3px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 0px 14px -3px rgba(0, 0, 0, 0.7);
+  }
+  
+  .btn:hover {
+    border-color: black;
+  }
+  
+  .btn.correct {
+    --hue: var(--hue-correct);
+    color: black;
+  }
+  
+  .btn.wrong {
+    --hue: var(--hue-wrong);
+  }
+  
+  /* New stuff */
+  
+  h1,
+  h2 {
+    font-family: "Fredoka One", cursive;
+    letter-spacing: 4px;
+  }
+  
+  .controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hide {
+    display: none;
+  }
+  
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 4px;
+    line-height: 30px;
+    width: 80%; /* Could be more or less, depending on screen size */
+    color: #fff;
+    background: rgb(218, 193, 250);
+    background: linear-gradient(
+      180deg,
+      rgba(218, 193, 250, 1) 0%,
+      rgba(160, 96, 241, 1) 98%
+    );
+  }
+  
+  .quiz-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    height: 80vh;
+  }
+  
+  /* The Close Button */
+  #closeHowTo {
+    color: #a060f1ff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    border: none;
+    height: 40px;
+    width: 40px;
+    border-radius: 4px;
+  }
+  
+  .closeHowTo:hover,
+  .closeHowTo:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  #logo {
+    font-size: 40px;
+    color: #fff;
+    padding: 10px 4px;
+    margin: 0 0 20px 0;
+    background: rgba(160, 96, 241, 0.4);
+    -webkit-box-shadow: 0px 0px 14px -3px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 0px 14px -3px rgba(0, 0, 0, 0.7);
+  }
+  
+  .input-label {
+    font-size: 24px;
+    color: #fff;
+    width: 100%;
+  }
+  
+  .input-group {
+    display: flex;
+    margin-top: 20px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0px 0px 14px -3px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 0px 14px -3px rgba(0, 0, 0, 0.7);
+  }
+  
+  .name-input {
+    padding: 10px;
+    border-radius: 4px 0 0 4px;
+    border: none;
+    font-size: 24px;
+  }
+  
+  .name-button {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 0 4px 4px 0;
+    font-size: 24px;
+    color: #fff;
+    background: rgb(0, 195, 255);
+    background: linear-gradient(
+      180deg,
+      rgba(0, 195, 255, 1) 0%,
+      rgba(0, 119, 156, 1) 98%
+    );
+  }
+  
+  .name-button:hover {
+    background: rgb(0, 195, 255);
+    background: linear-gradient(
+      180deg,
+      rgba(0, 195, 255, 0.7) 0%,
+      rgba(0, 119, 156, 0.7) 98%
+    );
+    cursor: pointer;
+  }
+  
+  #howToButton {
+    margin-top: 20px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 24px;
+    color: #fff;
+    background: rgb(218, 193, 250);
+    background: linear-gradient(
+      180deg,
+      rgba(218, 193, 250, 1) 0%,
+      rgba(160, 96, 241, 1) 98%
+    );
+    -webkit-box-shadow: 0px 0px 14px -3px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 0px 14px -3px rgba(0, 0, 0, 0.7);
+    transition: box-shadow 0.5s ease;
+  }
+  
+  #howToButton:hover {
+    cursor: pointer;
+    -webkit-box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.7);
+  }
+  
+  /* Background for wrong answer */
+  /* background: rgb(255,0,0);
+  background: linear-gradient(180deg, rgba(255,0,0,1) 33%, rgba(135,3,3,1) 68%); */
+  
+  /* Background for right answer */
+  .wrong {
+    background: rgb(255, 0, 0);
+    background: linear-gradient(
+      180deg,
+      rgba(255, 0, 0, 1) 33%,
+      rgba(135, 3, 3, 1) 68%
+    );
+  }
+  
+  .correct {
+    background: rgb(123, 255, 0);
+    background: linear-gradient(
+      180deg,
+      rgba(123, 255, 0, 1) 33%,
+      rgba(3, 135, 15, 1) 68%
+    );
+  }
+  /* background: rgb(123,255,0);
+  background: linear-gradient(180deg, rgba(123,255,0,1) 33%, rgba(3,135,15,1) 68%); */
+  
+  /* Needs to be fixed */
+  .start-btn,
+  .next-btn {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 0 20px;
+  }
+  
+  #score-area {
+    font-size: 24px;
+    color: #fff;
+  }
+  
+  @media only screen and (max-width: 800px) {
+    .controls {
+      flex-direction: column;
+      row-gap: 20px;
+    }
+  
+    .container {
+      max-width: 95%;
+    }
+  }
+  ne;
   padding: 10px 20px;
   border-radius: 4px;
   font-size: 24px;
@@ -346,6 +703,8 @@ h2 {
   font-size: 24px;
   color: #fff;
 }
+
+/* Mobile responsive */
 
 @media only screen and (max-width: 800px) {
   .controls {
