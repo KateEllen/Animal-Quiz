@@ -1,5 +1,3 @@
-import questionnaire from "./questions.js";
-
 const nextButton = document.getElementById("next-btn");
 const questionContainerElement = document.getElementById("question-container");
 const answerButtonsElement = document.getElementById("answer-buttons");
@@ -25,6 +23,8 @@ nextButton.addEventListener("click", () => {
 });
 
 function startGame(questionaireIndex) {
+  document.getElementById("score-area").classList.remove("hide");
+
   quizButtonContainer.classList.add("hide");
   shuffledQuestions = questionnaire[questionaireIndex].questions.sort(
     () => Math.random() - 0.5
@@ -107,14 +107,17 @@ function setStatusClass(element, correct) {
   clearStatusClass(element);
   if (correct) {
     element.classList.add("correct");
+    element.disabled = true;
   } else {
     element.classList.add("wrong");
+    element.disabled = true;
   }
 }
 
 function clearStatusClass(element) {
   element.classList.remove("correct");
   element.classList.remove("wrong");
+  element.disabled = false;
 }
 
 function incrementScore() {
@@ -147,15 +150,24 @@ window.onclick = function (event) {
   }
 };
 
-
-
-// create welcome function
-
-function welcome(fname) {
-  document.getElementById("greeting").innerHTML = whatever;
+function welcome() {
+  document.getElementById("greeting").classList.remove("hide");
+  // update the welcome to the entered name, or default to Player 1
+  if (document.getElementById("fname").value.length > 0) {
+    document.getElementById("username").innerHTML = document.getElementById(
+      "fname"
+    ).value;
+  } else {
+    document.getElementById("username").innerHTML = "Player 1";
+  }
+  // hide name entry
+  document.getElementById("nameCollector").classList.add("hide");
+  // Show the quiz
+  document.getElementById("quiz-interaction").classList.remove("hide");
 }
 
-
-// see if user entered a name in the form and update welcome function with that value
-welcome(document.getElementById("fname").value)
-document.getElementById("nameCollector").classList.add("hide"); 
+window.onload = function () {
+  document.getElementById("welcome").addEventListener("click", function () {
+    welcome();
+  });
+};
