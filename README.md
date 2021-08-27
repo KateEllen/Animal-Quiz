@@ -5,7 +5,7 @@ Kate_Ellen
 
 ## Project Overview 
 
-
+![Website Display](https://github.com/KateEllen/Animal-Quiz/blob/main/assets/images/documentation/responsive-screenshot.png)
 
 
 This site is designed for people who love animals and quizzes. Test your dog knowledge while looking at cute pups, or test your trivia knowledge too see how much you know about the animal kingdom, or for the real test see if you can tell the difference between an alligator or a crocodile!  

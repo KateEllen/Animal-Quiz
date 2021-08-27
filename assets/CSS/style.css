@@ -38,31 +38,7 @@ footer {
  
 }
 
-.social-networks {
-    text-align: center;
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-    top: 15px;
-    position: relative;
-}
 
-.social-networks li {
-    display: inline;
-}
-
-.social-networks i {
-    font-size: 200%;
-    margin: 1%;
-    padding: 5%;
-    color: #fff;
-}
-
-.social-networks a:hover i {
-    transform: rotate(-20deg) scale(1.5);
-    color:#a060f1ff;
-    ;
-}
 
 
 

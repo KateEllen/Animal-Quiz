@@ -1,3 +1,6 @@
+ /*jshint esversion: 6 */
+
+
 const nextButton = document.getElementById("next-btn");
 const questionContainerElement = document.getElementById("question-container");
 const answerButtonsElement = document.getElementById("answer-buttons");
