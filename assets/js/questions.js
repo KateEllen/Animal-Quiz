@@ -149,74 +149,74 @@
   ]
 },
 {
-  name: "Some Other quiz",
+  name: "Animal Trivia",
   questions: [{
-      question: "What dog is this?",
-      picture: "assets/images/dogs/bulldog.jpg",
-      attribution: "Image by Ilona Krijgsman from Pixabay",
+      question: "There are 260 different species of monkeys on earth.",
+      picture: "assets/images/trivia/monkey.jpg",
+      attribution: "Photo by som baderiya from Pexels",
       answers: [{
-          text: "Bulldog",
+          text: "True",
           correct: true
         },
         {
-          text: "Beagle",
+          text: "False",
           correct: false
         }
       ]
     },
     {
-      question: "What dog is this?",
-      picture: "assets/images/dogs/doberman.jpg",
-      attribution: "Image by Here and now, unfortunately, ends my journey on Pixabay from Pixabay ",
+      question: "The oldest breed of dog is the Basenji",
+      picture: "assets/images/trivia/trivia-dog.jpg",
+      attribution: "Image by Pixabay from Pexels ",
       answers: [{
-          text: "Poodle",
-          correct: false
-        },
-        {
-          text: "Doberman",
-          correct: true
-        }
-      ]
-    },
-    {
-      question: "What dog is this?",
-      picture: "assets/images/dogs/collie.jpg",
-      attribution: "Image by Here and now, unfortunately, ends my journey on Pixabay from Pixabay ",
-      answers: [{
-          text: "Jack Russel",
-          correct: false
-        },
-        {
-          text: "Collie",
-          correct: true
-        }
-      ]
-    },
-    {
-      question: "What dog is this?",
-      picture: "assets/images/dogs/dalmation.jpg",
-      attribution: "Photo by Kasuma from Pexels",
-      answers: [{
-          text: "Dalmation",
+          text: "True",
           correct: true
         },
         {
-          text: "Great Dane",
+          text: "False",
           correct: false
         }
       ]
     },
     {
-      question: "What dog is this?",
-      picture: "assets/images/dogs/labrador.jpg",
-      attribution: "Image by Josch Nolte from Pixabay",
+      question: "Male honey bees are called Drones",
+      picture: "assets/images/trivia/bees.jpg",
+      attribution: "Image by Ronald Álvarez Domínguez from Pixabay ",
       answers: [{
-          text: "Labrador",
+          text: "True",
           correct: true
         },
         {
-          text: "Pitbull",
+          text: "False",
           correct: false
+        }
+      ]
+    },
+    {
+      question: "A baby fox is called a kid.",
+      picture: "assets/images/trivia/fox.jpg",
+      attribution: "Image by Hans Benn from Pixabay ",
+      answers: [{
+          text: "True",
+          correct: false
+        },
+        {
+          text: "False",
+          correct: true
+        }
+      ]
+    },
+    {
+      question: "Rhino horns are made out of ivory.",
+      picture: "assets/images/trivia/rhino.jpg",
+      attribution: "Image by Nel Botha from Pixabay ",
+      answers: [{
+          text: "True",
+          correct: false
+        },
+        {
+          text: "False",
+          correct: true
         }
       ]
     }
