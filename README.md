@@ -33,6 +33,18 @@ Below are the wireframes I created when first starting my project. I changed my 
 
 ### Existing Features 
 
+#### Name Form
+
+#### Modulus
+
+#### Colour changing background depending on answer
+
+#### Score tracker
+
+#### Restart Button
+
+
+
 
 
 ### Features left to impliment. 
@@ -42,19 +54,28 @@ Below are the wireframes I created when first starting my project. I changed my 
 ## Testing
 
 ### Lighthouse Audit 
-- Home Page 
+- 
 
 
 ### Validator Testing 
 #### W3C CSS Validation 
-
+Passed through the CSS validator with no errors.
 
 #### HTML Validator 
+Passed through HTML Validator with no errors.
+
+#### JSHint 
+Passed through JSHint with no errors. 
 
 
 #### Cross Browser and Device Testing
 
+- I tested my site on the below. 
+1. Samsung S20 - 5.97 X 2.72 
+2. MacBook Pro - 12.78 X 8.94 
+3. dev tools emulator: pixel 2 - SM 411 x 731 mm
 
+- It was also tested on safari, chrome and firefox. 
 
 
 
