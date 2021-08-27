@@ -14,8 +14,11 @@ This site is designed for people who love animals and quizzes. Test your dog kno
 
 ### Wireframes 
 
-Below are the wireframes I created when first starting my project. I mainly stuck to the wireframes. 
+Below are the wireframes I created when first starting my project. I changed my plans a lot from the original wireframes, as I decided to go for a smoother design with more hidden items at the beginning.  
 [Opening page](https://github.com/KateEllen/Animal-Quiz/tree/main/assets/images/documentation)
+[Dog Quiz](https://github.com/KateEllen/Animal-Quiz/blob/main/assets/images/documentation/dog-quiz-wireframe.png)
+[Ali-V-Croc](https://github.com/KateEllen/Animal-Quiz/blob/main/assets/images/documentation/ali-v-croc-wireframe.png)
+[Trivia](https://github.com/KateEllen/Animal-Quiz/blob/main/assets/images/documentation/trivia-wireframe.png)
 
 ## Design Choices 
 
