@@ -34,16 +34,21 @@ I chose the below colour palette as it had a nice flow. I got my inspiration fro
 ### Existing Features 
 
 #### Name Form
+[Name Form]()
 
 #### Modal
+[How To](https://github.com/KateEllen/Animal-Quiz/blob/main/assets/images/documentation/how-to-button.png)
+[Modal](https://github.com/KateEllen/Animal-Quiz/blob/main/assets/images/documentation/how-to-modal.png)
 
 #### Colour changing background depending on answer
+[Right Answer background](https://github.com/KateEllen/Animal-Quiz/blob/main/assets/images/documentation/right-answer.png)
+[Wrong Answer background](https://github.com/KateEllen/Animal-Quiz/blob/main/assets/images/documentation/wrong-answer.png)
 
 #### Score tracker
+[Score Tracker](https://github.com/KateEllen/Animal-Quiz/blob/main/assets/images/documentation/score-tracker.png)
 
 #### Restart Button
-
-
+[Restart Button](https://github.com/KateEllen/Animal-Quiz/blob/main/assets/images/documentation/restart-button.png)
 
 
 

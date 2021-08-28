@@ -24,23 +24,6 @@ body {
   );
 }
 
-/* Footer */
-footer {
- 
-    display: flex;
-    font-size: 40px;
-    color: #fff;
-    padding: 10px 4px;
-    margin: 0 0 20px 0;
-    background: rgba(160, 96, 241, 0.4);
-    -webkit-box-shadow: 0px 0px 14px -3px rgba(0, 0, 0, 0.7);
-    box-shadow: 0px 0px 14px -3px rgba(0, 0, 0, 0.7);
- 
-}
-
-
-
-
 
 /* Logo */
 
@@ -61,7 +44,7 @@ footer {
   height: 100%;
   max-height: 150px;
 }
-
+/* Greeting */
 .greeting {
   height: 200px;
   position: relative;
@@ -133,12 +116,12 @@ body.wrong {
   --hue: var(--hue-wrong);
 }
 
-/* New stuff */
 
 h1,
 h2 {
   font-family: "Fredoka One", cursive;
   letter-spacing: 4px;
+  margin: 1rem;
   color: #fff;
 }
 
@@ -151,7 +134,7 @@ h2 {
 .hide {
   display: none;
 }
-
+/* Modal */
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
@@ -210,6 +193,8 @@ h2 {
   cursor: pointer;
 }
 
+/*Logo */
+
 #logo {
   font-size: 40px;
   color: #fff;
@@ -219,7 +204,7 @@ h2 {
   -webkit-box-shadow: 0px 0px 14px -3px rgba(0, 0, 0, 0.7);
   box-shadow: 0px 0px 14px -3px rgba(0, 0, 0, 0.7);
 }
-
+/* Name Input */
 .input-label {
   font-size: 24px;
   color: #fff;
@@ -264,7 +249,7 @@ h2 {
   );
   cursor: pointer;
 }
-
+/*Modal Button*/
 #howToButton {
   margin-top: 20px;
   border: none;
@@ -289,9 +274,6 @@ h2 {
   box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.7);
 }
 
-/* Background for wrong answer */
-/* background: rgb(255,0,0);
-background: linear-gradient(180deg, rgba(255,0,0,1) 33%, rgba(135,3,3,1) 68%); */
 
 /* Background for right answer */
 .wrong {
@@ -320,6 +302,8 @@ background: linear-gradient(180deg, rgba(255,0,0,1) 33%, rgba(135,3,3,1) 68%); *
   margin: 0 20px;
 }
 
+/*Score Area*/
+
 #score-area {
   font-size: 24px;
   color: #fff;
@@ -343,5 +327,8 @@ background: linear-gradient(180deg, rgba(255,0,0,1) 33%, rgba(135,3,3,1) 68%); *
   }
   .quiz-container {
     max-width: 80%;
+  }
+  .input-group {
+    flex-direction:column;
   }
 }
