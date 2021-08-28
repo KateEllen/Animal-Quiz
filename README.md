@@ -107,7 +107,8 @@ The live link can be found here - https://kateellen.github.io/Animal-Quiz/
 ### Credits 
 
 #### Images
- All imagery used the in the quizzes are cross referenced in the question.js questionnaire JSON object:  https://github.com/KateEllen/Animal-Quiz/blob/149d98b9e72a474f72546ddc36c11e47c6737ace/assets/js/questions.js#L8 
+ - All imagery used the in the quizzes are cross referenced in the question.js questionnaire JSON object:  https://github.com/KateEllen/Animal-Quiz/blob/149d98b9e72a474f72546ddc36c11e47c6737ace/assets/js/questions.js#L8 
+ - Colour palette was creadted by using : https://htmlcolors.com/create-palette
 
  #### Trivia Questions
 - Trivia questions were chosen from: https://icebreakerquestions.info/animal-trivia/
