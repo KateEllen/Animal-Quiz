@@ -102,8 +102,6 @@ I tracked defects in github. You can find them [here](https://github.com/KateEll
   - Select the save button. 
   - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
 
-The live link can be found here - https://kateellen.github.io/life-hacks/
-
 The live link can be found here - https://kateellen.github.io/Animal-Quiz/
 
 ### Credits 
