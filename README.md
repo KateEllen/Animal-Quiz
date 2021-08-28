@@ -87,6 +87,25 @@ Passed through JSHint with no errors.
 
 - It was also tested on safari, chrome and firefox. 
 
+#### Dog, Trivia & Croc v Alligator quiz:
+    1. Choose your quiz.
+    2. Try to click your answer.
+    3. Try to click the next button.
+    4. Try to click the restart button
+    5. Ensure page shows a green background for right answer, and a red background for wrong answers. 
+    6. Repeat on all pages.
+
+#### Name collector: 
+    1. Open page.
+    2. Enter name.
+    3. Make sure welcome message shows with name added.
+    4. Check that if no name is entered that the default is Player 1. 
+
+#### How to: 
+    1. Click how to button. 
+    2. Make sure you can see the content. 
+    3. Click on the X button to ensure it will close the modal. 
+
 ## Defects 
 
 I tracked defects in github. You can find them [here](https://github.com/KateEllen/Animal-Quiz/issues?q=is%3Aissue+is%3Aclosed)
