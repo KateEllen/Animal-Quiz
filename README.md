@@ -24,7 +24,7 @@ Below are the wireframes I created when first starting my project. I changed my 
 
 #### Colours 
 I chose the below colour palette as it had a nice flow. I got my inspiration from the colours in this design:![Dribbble](https://dribbble.com/shots/4918055/attachments/4918055-Quiztion-Trivia-Game?mode=media)
-https://github.com/KateEllen/Animal-Quiz/blob/main/assets/images/documentation/colour-palette.png
+![Colour palette](https://github.com/KateEllen/Animal-Quiz/blob/main/assets/images/documentation/colour-palette.png)
 #### Images
 
 
@@ -33,22 +33,29 @@ https://github.com/KateEllen/Animal-Quiz/blob/main/assets/images/documentation/c
 
 ### Existing Features 
 
-#### Name Form
-[Name Form]()
+#### Name Collection
+Collecting the user's name gives them a sense of inclusion when it shows on the next scrren. If a user doesn't want to add their name, it will default to Player 1. 
+![Name collection](https://github.com/KateEllen/Animal-Quiz/blob/main/assets/images/documentation/name-collection.png)
 
-#### Modal
-[How To](https://github.com/KateEllen/Animal-Quiz/blob/main/assets/images/documentation/how-to-button.png)
-[Modal](https://github.com/KateEllen/Animal-Quiz/blob/main/assets/images/documentation/how-to-modal.png)
+#### Rules Modal
+The rules modal tells users about the quiz and lets them know that they could play a few rounds without getting the same questions. 
+![How To](https://github.com/KateEllen/Animal-Quiz/blob/main/assets/images/documentation/how-to-button.png)
+![Modal](https://github.com/KateEllen/Animal-Quiz/blob/main/assets/images/documentation/how-to-modal.png)
 
 #### Colour changing background depending on answer
-[Right Answer background](https://github.com/KateEllen/Animal-Quiz/blob/main/assets/images/documentation/right-answer.png)
-[Wrong Answer background](https://github.com/KateEllen/Animal-Quiz/blob/main/assets/images/documentation/wrong-answer.png)
+In order to give the user a sense if an answer is right or wrong, the background of the questions container changes to green for correct and red for incorrect.
+![Right Answer background](https://github.com/KateEllen/Animal-Quiz/blob/main/assets/images/documentation/right-answer.png)
+![Wrong Answer background](https://github.com/KateEllen/Animal-Quiz/blob/main/assets/images/documentation/wrong-answer.png)
 
 #### Score tracker
-[Score Tracker](https://github.com/KateEllen/Animal-Quiz/blob/main/assets/images/documentation/score-tracker.png)
+Allows users to see how many questions they got correct vs incorrect during the quiz
+![Score Tracker](https://github.com/KateEllen/Animal-Quiz/blob/main/assets/images/documentation/score-tracker.png)
 
 #### Restart Button
-[Restart Button](https://github.com/KateEllen/Animal-Quiz/blob/main/assets/images/documentation/restart-button.png)
+Allows user to start another quiz session. This button only shows up when the user has submitted an answer to the 5th question.
+![Restart Button](https://github.com/KateEllen/Animal-Quiz/blob/main/assets/images/documentation/restart-button.png)
+#### 404 Page
+If the user messes up the URL within the domain of the game, they get a friendly screen tied to the animal quiz and a button to get back to the main page.
 
 
 
@@ -59,19 +66,21 @@ https://github.com/KateEllen/Animal-Quiz/blob/main/assets/images/documentation/c
 ## Testing
 
 ### Lighthouse Audit 
-- 
+![Lighthouse Audit](https://github.com/KateEllen/Animal-Quiz/blob/main/assets/images/documentation/audit.png)
 
 
 ### Validator Testing 
 #### W3C CSS Validation 
 Passed through the CSS validator with no errors.
+![CSS Validator](https://github.com/KateEllen/Animal-Quiz/blob/main/assets/images/documentation/css-validation.png)
 
 #### HTML Validator 
 Passed through HTML Validator with no errors.
+![HTML Validator](https://github.com/KateEllen/Animal-Quiz/blob/main/assets/images/documentation/html-validation.png)
 
 #### JSHint 
 Passed through JSHint with no errors. 
-
+![JS Validator](https://github.com/KateEllen/Animal-Quiz/blob/main/assets/images/documentation/main-page-wireframe.png)
 
 #### Cross Browser and Device Testing
 
@@ -82,13 +91,9 @@ Passed through JSHint with no errors.
 
 - It was also tested on safari, chrome and firefox. 
 
+## Defects 
 
-
-
-## Outstanding Defects 
-
-
-
+I tracked defects in github. You can find them [here](https://github.com/KateEllen/Animal-Quiz/issues?q=is%3Aissue+is%3Aclosed)
 
 ## Deployments 
 
@@ -96,9 +101,18 @@ The live link can be found here - https://kateellen.github.io/Animal-Quiz/
 
 ### Credits 
 
-## Content 
+#### Images
+ All imagery used the in the quizzes are cross referenced in the question.js questionnaire JSON object:  https://github.com/KateEllen/Animal-Quiz/blob/149d98b9e72a474f72546ddc36c11e47c6737ace/assets/js/questions.js#L8 
 
+ #### Trivia Questions
+- Trivia questions were chosen from: https://icebreakerquestions.info/animal-trivia/
 
-- The icons in the footer were taken from [Font Awesome] (https://fontawesome.com/)
-
+#### Code
+- Modal code was adopted from:   https://www.w3schools.com/howto/howto_css_modals.asphttps://www.w3schools.com/howto/howto_css_modals.asp 
+- Noscript code was adopted from: https://www.w3schools.com/tags/tag_noscript.asp
+- Onload function was adopted from: https://www.w3schools.com/jsref/event_onload.asp
+- Overall quiz concept was developed by these tutorials: https://www.youtube.com/watch?v=riDzcEQbX6k
+- I had help from Niall Joe Maher with developing the restart button. 
+ 
 ## Acknowledgments
+- As always I would like to acknowledge my mentor Malia. She has calmed me down, prevented mental breakdowns and steered me in the right direction.

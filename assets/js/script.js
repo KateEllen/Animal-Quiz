@@ -31,7 +31,6 @@
   * Hides question index
   */
 
-
  function startGame(questionaireIndex) {
    document.getElementById("score-area").classList.remove("hide");
 
@@ -44,11 +43,9 @@
    setNextQuestion();
  }
 
- /**
-  * Resets state to create next question
-  */
-
-
+ 
+ //Resets state to create next question
+  
  function setNextQuestion() {
    resetState();
    showQuestion(shuffledQuestions[currentQuestionIndex]);
@@ -62,7 +59,6 @@
   * 
   * Also adds listeners to the welcome button click
   */
-
 
  function showQuestion(question) {
    if (typeof question.picture !== "undefined") {
@@ -88,7 +84,7 @@
      answerButtonsElement.appendChild(button);
    });
  }
-
+// hides next button 
  function resetState() {
    clearStatusClass(document.body);
    nextButton.classList.add("hide");
@@ -119,7 +115,7 @@
      });
    }
  }
-
+// Checks if answer is correct and adds to score
  function checkAnswer(isCorrect) {
    if (isCorrect) {
      incrementScore();
@@ -144,7 +140,7 @@
    element.classList.remove("wrong");
    element.disabled = false;
  }
-
+// score tracker
  function incrementScore() {
    let oldScore = parseInt(document.getElementById("score").innerText);
    document.getElementById("score").innerText = ++oldScore;
