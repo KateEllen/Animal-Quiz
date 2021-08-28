@@ -43,9 +43,9 @@
    setNextQuestion();
  }
 
- 
+
  //Resets state to create next question
-  
+
  function setNextQuestion() {
    resetState();
    showQuestion(shuffledQuestions[currentQuestionIndex]);
@@ -84,7 +84,7 @@
      answerButtonsElement.appendChild(button);
    });
  }
-// hides next button 
+ // hides next button 
  function resetState() {
    clearStatusClass(document.body);
    nextButton.classList.add("hide");
@@ -115,7 +115,7 @@
      });
    }
  }
-// Checks if answer is correct and adds to score
+ // Checks if answer is correct and adds to score
  function checkAnswer(isCorrect) {
    if (isCorrect) {
      incrementScore();
@@ -140,7 +140,7 @@
    element.classList.remove("wrong");
    element.disabled = false;
  }
-// score tracker
+ // score tracker
  function incrementScore() {
    let oldScore = parseInt(document.getElementById("score").innerText);
    document.getElementById("score").innerText = ++oldScore;
