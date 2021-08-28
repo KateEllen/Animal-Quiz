@@ -1,5 +1,7 @@
  /*jshint esversion: 6 */
  
+ // ********** Dog quiz ************ //
+
  const questionnaire = [{
   name: "What Dog is This",
   questions: [{
@@ -74,7 +76,7 @@
     }
   ]
 },
-// ********** New quiz ************ //
+// ********** Ali v Croc quiz ************ //
 {
   name: "Ally Vs Croc",
   questions: [{
@@ -149,6 +151,8 @@
     }
   ]
 },
+
+// ********** Trivia quiz ************ //
 {
   name: "Animal Trivia",
   questions: [{
