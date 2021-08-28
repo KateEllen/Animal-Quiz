@@ -23,7 +23,7 @@ Below are the wireframes I created when first starting my project. I changed my 
 ## Design Choices 
 
 #### Colours 
-
+I chose the below colour palette as it had a nice flow. I got my inspiration from the colours in this design:![Dribbble](https://dribbble.com/shots/4918055-Quiztion-Trivia-Game)
 
 #### Images
 
@@ -35,7 +35,7 @@ Below are the wireframes I created when first starting my project. I changed my 
 
 #### Name Form
 
-#### Modulus
+#### Modal
 
 #### Colour changing background depending on answer
 
