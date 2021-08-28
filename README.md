@@ -34,34 +34,30 @@ I chose the below colour palette as it had a nice flow. I got my inspiration fro
 ### Existing Features 
 
 #### Name Collection
-Collecting the user's name gives them a sense of inclusion when it shows on the next scrren. If a user doesn't want to add their name, it will default to Player 1. 
+- Collecting the user's name gives them a sense of inclusion when it shows on the next scrren. If a user doesn't want to add their name, it will default to Player 1. 
 ![Name collection](https://github.com/KateEllen/Animal-Quiz/blob/main/assets/images/documentation/name-collection.png)
 
 #### Rules Modal
-The rules modal tells users about the quiz and lets them know that they could play a few rounds without getting the same questions. 
+- The rules modal tells users about the quiz and lets them know that they could play a few rounds without getting the same questions. 
 ![How To](https://github.com/KateEllen/Animal-Quiz/blob/main/assets/images/documentation/how-to-button.png)
 ![Modal](https://github.com/KateEllen/Animal-Quiz/blob/main/assets/images/documentation/how-to-modal.png)
 
 #### Colour changing background depending on answer
-In order to give the user a sense if an answer is right or wrong, the background of the questions container changes to green for correct and red for incorrect.
+- In order to give the user a sense if an answer is right or wrong, the background of the questions container changes to green for correct and red for incorrect.
 ![Right Answer background](https://github.com/KateEllen/Animal-Quiz/blob/main/assets/images/documentation/right-answer.png)
 ![Wrong Answer background](https://github.com/KateEllen/Animal-Quiz/blob/main/assets/images/documentation/wrong-answer.png)
 
 #### Score tracker
-Allows users to see how many questions they got correct vs incorrect during the quiz
+- Allows users to see how many questions they got correct vs incorrect during the quiz
 ![Score Tracker](https://github.com/KateEllen/Animal-Quiz/blob/main/assets/images/documentation/score-tracker.png)
 
 #### Restart Button
-Allows user to start another quiz session. This button only shows up when the user has submitted an answer to the 5th question.
+- Allows user to start another quiz session. This button only shows up when the user has submitted an answer to the 5th question.
 ![Restart Button](https://github.com/KateEllen/Animal-Quiz/blob/main/assets/images/documentation/restart-button.png)
-#### 404 Page
-If the user messes up the URL within the domain of the game, they get a friendly screen tied to the animal quiz and a button to get back to the main page.
-
-
 
 ### Features left to impliment. 
 
-
+- I would like to add a fun 404 page. Due to tinme restirctions I sadly could not create this. 
 
 ## Testing
 
@@ -96,6 +92,17 @@ Passed through JSHint with no errors.
 I tracked defects in github. You can find them [here](https://github.com/KateEllen/Animal-Quiz/issues?q=is%3Aissue+is%3Aclosed)
 
 ## Deployments 
+- The site was deployed to GitHub pages. The steps to deploy are as follows: 
+  - In the GitHub repository, navigate to the Settings tab 
+  ![Settings Tab](https://github.com/KateEllen/Animal-Quiz/blob/main/assets/images/documentation/settings-screenshot.png)
+  - Scroll down the page and find the Github pages section, and click on the link.
+  ![Github Page Link](https://github.com/KateEllen/Animal-Quiz/blob/main/assets/images/documentation/github-pages-screenshot.png)
+  - From the source section drop-down menu, select the Master Branch
+  ![Select Source](https://github.com/KateEllen/Animal-Quiz/blob/main/assets/images/documentation/published-screenshot.png)
+  - Select the save button. 
+  - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
+
+The live link can be found here - https://kateellen.github.io/life-hacks/
 
 The live link can be found here - https://kateellen.github.io/Animal-Quiz/
 
