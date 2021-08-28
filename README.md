@@ -76,7 +76,7 @@ Passed through HTML Validator with no errors.
 
 #### JSHint 
 Passed through JSHint with no errors. 
-![JS Validator](https://github.com/KateEllen/Animal-Quiz/blob/main/assets/images/documentation/main-page-wireframe.png)
+![JS Validator](https://github.com/KateEllen/Animal-Quiz/blob/main/assets/images/documentation/js-validation.png)
 
 #### Cross Browser and Device Testing
 
